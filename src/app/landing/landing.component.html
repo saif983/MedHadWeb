@@ -1,0 +1,302 @@
+<!-- HEADER -->
+<header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 px-6 py-4" [class.glass]="isScrolled"
+  [class.py-3]="isScrolled">
+  <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <div class="flex items-center gap-2">
+      <img src="assets/logo.jpeg" alt="MedHad Logo"
+        class="w-10 h-10 rounded-lg shadow-lg shadow-emerald-200 object-cover">
+      <span class="text-2xl font-black text-slate-900 tracking-tight">MedHad</span>
+    </div>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="#how-it-works"
+        class="text-sm font-semibold text-slate-600 hover:text-emerald-600 transition-colors">كيفاش تخدم؟</a>
+      <a href="#features" class="text-sm font-semibold text-slate-600 hover:text-emerald-600 transition-colors">علاش
+        أحنا؟</a>
+      <a href="#about" class="text-sm font-semibold text-slate-600 hover:text-emerald-600 transition-colors">علينا</a>
+      <button
+        class="bg-emerald-600 text-white px-6 py-2.5 rounded-full font-bold text-sm hover:bg-emerald-700 transition-all shadow-lg shadow-emerald-200 active:scale-95">
+        جرب توة
+      </button>
+    </nav>
+
+    <!-- Mobile Button -->
+    <button (click)="toggleMenu()" class="md:hidden text-slate-900 p-2">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path *ngIf="!isMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16m-7 6h7" />
+        <path *ngIf="isMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <div *ngIf="isMenuOpen"
+    class="md:hidden absolute top-full left-0 w-full glass bg-white mt-2 p-6 animate-fade-in-up border-b border-slate-100 shadow-2xl">
+    <nav class="flex flex-col gap-6 text-center">
+      <a (click)="toggleMenu()" href="#how-it-works" class="text-lg font-bold text-slate-700">كيفاش تخدم؟</a>
+      <a (click)="toggleMenu()" href="#features" class="text-lg font-bold text-slate-700">علاش أحنا؟</a>
+      <a (click)="toggleMenu()" href="#about" class="text-lg font-bold text-slate-700">علينا</a>
+      <button class="bg-emerald-600 text-white py-4 rounded-2xl font-black text-lg">جرب توة</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO SECTION -->
+  <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div class="relative z-10">
+        <div
+          class="inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 px-4 py-2 rounded-full text-sm font-bold mb-6">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+          </span>
+          متوفر في كامل تونس
+        </div>
+        <h1 class="text-5xl md:text-7xl font-black text-slate-900 leading-[1.1] mb-8">
+          دواك يوصلك <br>
+          <span class="text-emerald-600">للباب</span> بضغطة زر
+        </h1>
+        <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-lg ml-auto">
+          MedHad هو التطبيق التونسي الأول اللي يسهلّك قضية الدوا من الصيدلية. تصور الوصفة، و أحنا نتكلفو بالباقي.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-end">
+          <button
+            class="bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-slate-800 transition-all active:scale-95 shadow-xl shadow-slate-200">
+            تحميل التطبيق
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+          </button>
+          <button
+            class="bg-white border-2 border-slate-100 text-slate-600 px-8 py-4 rounded-2xl font-bold hover:bg-slate-50 transition-all active:scale-95">
+            كيفاش نولي شريك؟
+          </button>
+        </div>
+      </div>
+
+      <div class="relative order-first md:order-last">
+        <div class="absolute -top-20 -right-20 w-96 h-96 bg-emerald-100 rounded-full blur-3xl opacity-50"></div>
+        <div class="relative z-10 animate-fade-in-up">
+          <img src="/assets/hero-visual.png" alt="MedHad Hero"
+            class="w-full max-w-lg mx-auto transform hover:scale-105 transition-transform duration-700">
+          <!-- Floating UI Cards -->
+          <div
+            class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-2xl animate-bounce duration-[3000ms] glass">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <p class="text-[10px] text-slate-400 font-bold uppercase">سرعة التوصيل</p>
+                <p class="text-sm font-black text-slate-900">أقل من 30 دقيقة</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how-it-works" class="py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-4">كيفاش تخدم MedHad؟</h2>
+        <p class="text-slate-500 font-medium">خطوات بسيطة باش دواك يوصلك في أمان</p>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-8">
+        <div
+          class="group bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+          <div
+            class="w-16 h-16 bg-emerald-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-emerald-600 transition-colors">
+            <svg class="w-8 h-8 text-emerald-600 group-hover:text-white" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-black text-slate-900 mb-3">1. حل حساب</h3>
+          <p class="text-slate-500 leading-relaxed leading-rtl">سجل معلوماتك و العنوان متاعك في ثواني.</p>
+        </div>
+
+        <div
+          class="group bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+          <div
+            class="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-orange-500 transition-colors">
+            <svg class="w-8 h-8 text-orange-500 group-hover:text-white" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-black text-slate-900 mb-3">2. صور الوصفة</h3>
+          <p class="text-slate-500 leading-relaxed">ابعث صورة واضحة للوصفة الطبية متاعك.</p>
+        </div>
+
+        <div
+          class="group bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+          <div
+            class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+            <svg class="w-8 h-8 text-blue-500 group-hover:text-white" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-black text-slate-900 mb-3">3. الصيدلية تقبل</h3>
+          <p class="text-slate-500 leading-relaxed">الصيدلية الأقرب ليك تأكد الطلب و تحضرو.</p>
+        </div>
+
+        <div
+          class="group bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+          <div
+            class="w-16 h-16 bg-purple-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-600 transition-colors">
+            <svg class="w-8 h-8 text-purple-500 group-hover:text-white" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-black text-slate-900 mb-3">4. مبروك يوصلك</h3>
+          <p class="text-slate-500 leading-relaxed">عامل التوصيل يجيبلك دواك في وقت قياسي.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="py-24 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center gap-16">
+        <div class="w-full md:w-1/2">
+          <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-8">أقوى خدمة توصيل دوا
+            <br> في تونس 🇹🇳
+          </h2>
+          <div class="space-y-6">
+            <div class="flex items-start gap-4 p-6 rounded-2xl bg-emerald-50">
+              <div class="flex-1">
+                <h4 class="text-xl font-black text-emerald-900 mb-1">خدمة 24/7</h4>
+                <p class="text-emerald-700">أحنا معاك ليل و نهار، في الصيف و الشتاء.</p>
+              </div>
+              <div class="w-12 h-12 bg-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-6 rounded-2xl bg-slate-50">
+              <div class="flex-1">
+                <h4 class="text-xl font-black text-slate-900 mb-1">أمان كامل</h4>
+                <p class="text-slate-500">دواك يوصل مختوم و محفوظ في أحسن الظروف.</p>
+              </div>
+              <div class="w-12 h-12 bg-slate-900 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 relative">
+          <div class="bg-slate-200 rounded-[3rem] aspect-square overflow-hidden shadow-2xl">
+            <img src="assets/pharmacie.jpg" alt="Pharmacy"
+              class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000">
+          </div>
+          <div
+            class="absolute -bottom-10 -right-10 w-48 h-48 bg-emerald-600 rounded-full flex items-center justify-center border-8 border-white">
+            <p class="text-white font-black text-center leading-tight">+100 <br> صيدلية</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALL TO ACTION -->
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="bg-emerald-600 rounded-[3rem] p-12 md:p-24 text-center text-white relative overflow-hidden">
+        <div class="relative z-10">
+          <h2 class="text-4xl md:text-6xl font-black mb-8">حمل MedHad اليوم!</h2>
+          <p class="text-xl mb-12 opacity-90 max-w-2xl mx-auto font-medium">ابدأ تجربة جديدة و ريح بالك من تعب التنقل
+            للصيدلية.</p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <button
+              class="bg-white text-emerald-600 px-10 py-5 rounded-2xl font-black text-lg hover:shadow-2xl transition-all active:scale-95">Application
+              Store</button>
+            <button
+              class="bg-emerald-900/30 backdrop-blur-md text-white border border-white/20 px-10 py-5 rounded-2xl font-black text-lg hover:bg-emerald-900/50 transition-all active:scale-95">Google
+              Play</button>
+          </div>
+        </div>
+        <div class="absolute top-0 right-0 w-64 h-64 bg-emerald-500 rounded-full blur-[100px] -mr-32 -mt-32"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-emerald-700 rounded-full blur-[100px] -ml-32 -mb-32"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-slate-900 text-white pt-20 pb-10">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 mb-16">
+    <div class="md:col-span-2">
+      <div class="flex items-center gap-2 mb-6 justify-start">
+        <img src="assets/logo.jpeg" alt="MedHad Logo" class="w-10 h-10 rounded-lg object-cover order-first">
+        <span class="text-3xl font-black tracking-tight">MedHad</span>
+      </div>
+      <p class="text-slate-400 text-lg leading-relaxed max-w-sm ml-auto">
+        أول منصة تونسية ذكية لتوصيل الأدوية. مهمتنا نسهلو حياة المرضى و كبار السن في كل دار.
+      </p>
+    </div>
+
+    <div>
+      <h4 class="font-bold text-xl mb-6">روابط سريعة</h4>
+      <ul class="space-y-4 text-slate-400">
+        <li><a href="#" class="hover:text-emerald-500 transition-colors">الرئيسية</a></li>
+        <li><a href="#how-it-works" class="hover:text-emerald-500 transition-colors">كيفاش تخدم؟</a></li>
+        <li><a href="#features" class="hover:text-emerald-500 transition-colors">علاش أحنا؟</a></li>
+        <li><a href="#" class="hover:text-emerald-500 transition-colors">سياسة الخصوصية</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-bold text-xl mb-6">اتصل بنا</h4>
+      <ul class="space-y-4 text-slate-400 font-medium">
+        <li>contact&#64;medhad.tn</li>
+        <li dir="ltr">+216 21 333 495</li>
+        <li>تونس، تونس العاصمة</li>
+      </ul>
+    </div>
+  </div>
+
+  <div
+    class="max-w-7xl mx-auto px-6 pt-10 border-t border-slate-800 text-center flex flex-col md:flex-row justify-between items-center gap-6">
+    <p class="text-slate-500 font-medium">© 2026 MedHad. كل الحقوق محفوظة.</p>
+    <div class="flex gap-6">
+      <a href="#"
+        class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-emerald-600 transition-all"><svg
+          class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+        </svg></a>
+      <a href="https://www.instagram.com/medhad_delivery?igsh=MXhzOHM4dzMzM2UxMw=="
+        class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-emerald-600 transition-all"><svg
+          class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.058-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+        </svg></a>
+    </div>
+  </div>
+</footer>
