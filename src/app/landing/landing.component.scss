@@ -22,6 +22,40 @@
   animation: float 6s ease-in-out infinite;
 }
 
+// Soft bloby background
+.blob-bg {
+  position: absolute;
+  filter: blur(80px);
+  z-index: -1;
+  opacity: 0.6;
+}
+
+// Custom soft shadow specifically for the "Glovo" feel
+.shadow-soft {
+  box-shadow: 0 10px 40px -10px rgba(16, 185, 129, 0.2);
+}
+
+.shadow-card {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+// CTA Bounce
+@keyframes gentle-bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.hover-bounce:hover {
+  animation: gentle-bounce 1s infinite;
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: 2.5rem;

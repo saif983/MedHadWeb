@@ -23,7 +23,7 @@ export class LandingComponent implements OnInit {
 
     this.meta.updateTag({
       name: 'description',
-      content: 'MedHad هو تطبيق تونسي لتوصيل الأدوية من أقرب صيدلية للدار بسرعة وأمان.'
+      content: 'دواك يوصلك للدار في دقيقة مع MedHad. أول تطبيق تونسي لتوصيل الأدوية. حمل التطبيق و ارتاح.'
     });
 
     if (typeof window !== 'undefined') {
