@@ -2,8 +2,7 @@
 <header class="fixed top-0 left-0 w-full z-50 bg-white shadow-sm transition-all duration-300 px-6 py-4">
   <div class="max-w-6xl mx-auto flex justify-between items-center">
     <div class="flex items-center gap-3">
-      <img src="assets/logo.jpeg" alt="MedHad Logo" class="w-10 h-10 rounded-xl object-cover">
-      <span class="text-2xl font-bold text-slate-900">MedHad</span>
+      <img src="assets/logo.png" alt="MedHad Logo" class="w-16 h-16 rounded-xl object-cover">
     </div>
 
     <!-- Desktop Nav -->
@@ -49,32 +48,46 @@
 
 <main>
   <!-- 1. HERO: العنوان + الوصف + الأزرار -->
-  <section class="pt-28 pb-20 md:pt-36 md:pb-28 bg-gradient-to-b from-emerald-50 to-white">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <!-- العنوان -->
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6">
-        سهّل إدارة <span class="text-emerald-600">صحتك</span>: <br class="hidden md:block">
-        MedHad الحل الذكي لتوصيل الأدوية في كليك
-      </h1>
+  <section class="pt-28 pb-20 md:pt-36 md:pb-28 bg-gradient-to-b from-emerald-50 to-white overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- Text & Buttons (Left Column in RTL if order-2) -->
+        <div class="text-right order-2 md:order-2">
+          <!-- العنوان -->
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6">
+            سهّل إدارة <span class="text-emerald-600">صحتك</span>: <br>
+            MedHad الحل الذكي لتوصيل الأدوية في كليك
+          </h1>
 
-      <!-- الوصف -->
-      <p class="text-lg md:text-xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-        مركّز و رقمن طلباتك الصحية مع MedHad: اربح الوقت، تحاشى التعب و ركّز على صحتك — أدويتك توصلك للدار.
-      </p>
+          <!-- الوصف -->
+          <p class="text-lg md:text-xl text-slate-600 mb-10 max-w-xl leading-relaxed">
+              رقمن طلباتك الصحية معMedHad:  اربح الوقت، تحاشى التعب و ركّز على صحتك — أدويتك توصلك للدار.
+          </p>
 
-      <!-- الأزرار -->
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#download"
-          class="bg-emerald-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-emerald-700 transition-colors inline-flex items-center justify-center gap-2">
-          جرّب توّا
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-          </svg>
-        </a>
-        <a href="#contact"
-          class="bg-white text-slate-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-slate-50 transition-colors border border-slate-200 inline-flex items-center justify-center gap-2">
-          اطلب ديمو
-        </a>
+          <!-- الأزرار -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-start">
+            <a href="#download"
+              class="bg-emerald-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-emerald-700 transition-colors inline-flex items-center justify-center gap-2">
+              جرّب توّا
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </a>
+            <a href="#contact"
+              class="bg-white text-slate-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-slate-50 transition-colors border border-slate-200 inline-flex items-center justify-center gap-2">
+              اطلب ديمو
+            </a>
+          </div>
+        </div>
+
+        <!-- Image (Right Column in RTL if order-1) -->
+        <div class="relative order-1 md:order-1 md:-mr-24 lg:-mr-32">
+          <!-- Decorative blob behind image if needed, or just the image -->
+          <div class="relative z-10 w-full">
+            <img src="assets/hero-visual.png" alt="MedHad App Interface"
+              class="w-full h-auto object-contain transform hover:scale-[1.02] transition-transform duration-500">
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -83,56 +96,37 @@
   <section id="how-it-works" class="py-20 bg-white">
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-16">
-        <span class="text-emerald-600 font-semibold text-sm uppercase tracking-wider mb-2 block">⚙️ كيفاش تخدم</span>
         <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">كيفاش تخدم المنصّة</h2>
         <p class="text-slate-500 text-lg max-w-2xl mx-auto">تطبيق صحي مصمم باش يستجيب لكل احتياجاتك.</p>
       </div>
 
       <!-- الخصائص Grid -->
-      <div class="grid md:grid-cols-4 gap-6">
-        <div class="bg-slate-50 p-6 rounded-2xl text-center shadow-card">
-          <div
-            class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-            </svg>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Step 1 -->
+        <div class="bg-slate-50 p-8 rounded-2xl text-center shadow-card hover:shadow-lg transition-all duration-300">
+          <div class="mb-6 flex justify-center">
+            <img src="assets/security.png" alt="Sécurité" class="h-32 w-auto object-contain">
           </div>
-          <h3 class="text-lg font-bold text-slate-900 mb-2">إدارة الطلبات</h3>
-          <p class="text-slate-500 text-sm">تابع طلباتك و حالتهم في أي وقت.</p>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">صور الوصفة</h3>
+          <p class="text-slate-500 text-sm">أو اختر الأدوية بامان</p>
         </div>
 
-        <div class="bg-slate-50 p-6 rounded-2xl text-center shadow-card">
-          <div class="w-14 h-14 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-            </svg>
+        <!-- Step 2 -->
+        <div class="bg-slate-50 p-8 rounded-2xl text-center shadow-card hover:shadow-lg transition-all duration-300">
+          <div class="mb-6 flex justify-center">
+            <img src="assets/track_location.png" alt="Suivi" class="h-32 w-auto object-contain">
           </div>
-          <h3 class="text-lg font-bold text-slate-900 mb-2">صور الوصفة</h3>
-          <p class="text-slate-500 text-sm">أرسل تصويرة للوصفة و نحنا نتكفلو.</p>
-        </div>
-
-        <div class="bg-slate-50 p-6 rounded-2xl text-center shadow-card">
-          <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </div>
-          <h3 class="text-lg font-bold text-slate-900 mb-2">تتبع التوصيل</h3>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">تتبع التوصيل</h3>
           <p class="text-slate-500 text-sm">شوف وين وصل طلبك في الوقت الحقيقي.</p>
         </div>
 
-        <div class="bg-slate-50 p-6 rounded-2xl text-center shadow-card">
-          <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-            </svg>
+        <!-- Step 3 -->
+        <div class="bg-slate-50 p-8 rounded-2xl text-center shadow-card hover:shadow-lg transition-all duration-300">
+          <div class="mb-6 flex justify-center">
+            <img src="assets/livraison-rapide.png" alt="Livraison Rapide" class="h-32 w-auto object-contain">
           </div>
-          <h3 class="text-lg font-bold text-slate-900 mb-2">إشعارات فورية</h3>
-          <p class="text-slate-500 text-sm">نعلمك بكل تحديث على طلبك.</p>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">توصيل سريع</h3>
+          <p class="text-slate-500 text-sm">و تتبع طلباتك بسهولة</p>
         </div>
       </div>
     </div>
@@ -142,7 +136,6 @@
   <section id="why-us" class="py-20 bg-slate-50">
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-16">
-        <span class="text-emerald-600 font-semibold text-sm uppercase tracking-wider mb-2 block">⭐ علاش أحنا</span>
         <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">علاش تختار MedHad؟</h2>
         <p class="text-slate-500 text-lg max-w-2xl mx-auto">اكتشف القيم المضافة إلي تميزنا.</p>
       </div>
@@ -199,8 +192,7 @@
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <span class="text-emerald-600 font-semibold text-sm uppercase tracking-wider mb-4 block">🧩 منصة
-            متكاملة</span>
+
           <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">أداة صحية متكاملة و بسيطة</h2>
           <p class="text-slate-600 text-lg mb-8 leading-relaxed">
             MedHad، البساطة و راحة البال. خدمة توصيل أدوية، أدوات صحية متكاملة و مرافقة خبراء — الكل في تطبيق واحد.
@@ -226,7 +218,6 @@
   <!-- 5. 🚀 إبدا توّا (CTA) -->
   <section class="py-16 bg-emerald-600">
     <div class="max-w-4xl mx-auto px-6 text-center text-white">
-      <span class="text-emerald-200 font-semibold text-sm uppercase tracking-wider mb-2 block">🚀 إبدا توّا</span>
       <h2 class="text-3xl md:text-4xl font-bold mb-4">جاهز باش تبدا؟</h2>
       <p class="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
         سجّل اليوم و استفد من خدمة توصيل أدوية سريعة و موثوقة.
@@ -245,7 +236,6 @@
   <section class="py-20 bg-slate-50">
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-12">
-        <span class="text-emerald-600 font-semibold text-sm uppercase tracking-wider mb-2 block">🤝 شركاؤنا</span>
         <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">شركاؤنا يثقو فينا</h2>
         <p class="text-slate-500 text-lg">صيدليات و مؤسسات صحية تعاونو معانا.</p>
       </div>
@@ -303,7 +293,6 @@
   <section id="faq" class="py-20 bg-white">
     <div class="max-w-4xl mx-auto px-6">
       <div class="text-center mb-12">
-        <span class="text-emerald-600 font-semibold text-sm uppercase tracking-wider mb-2 block"> الأسئلة ❓</span>
         <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">أسئلة متداولة</h2>
         <p class="text-slate-500 text-lg">إذا ما لقيتش جواب لسؤالك، راسلنا.</p>
       </div>
@@ -407,7 +396,7 @@
   <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-4 gap-10 mb-12">
     <div class="md:col-span-2">
       <div class="flex items-center gap-3 mb-4">
-        <img src="assets/logo.jpeg" alt="MedHad Logo" class="w-10 h-10 rounded-xl object-cover">
+        <img src="assets/logo.png" alt="MedHad Logo" class="w-10 h-10 rounded-xl object-cover">
         <span class="text-2xl font-bold">MedHad</span>
       </div>
       <p class="text-slate-400 leading-relaxed max-w-sm">
